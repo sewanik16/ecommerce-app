@@ -1,0 +1,27 @@
+E-Commerce App
+---------------
+
+1. Client folder : for client side code -- react code
+2. Server folder : for server side code -- node & express code
+
+------------------------------------------------------
+> git init : to initialize E-Commerce App with git
+------------------------------------------------------
+
+Server :
+        1. cd server
+        2. npm init
+        3. npm install express mongoose nodemon bcryptjs jsonwebtoken
+
+        4. Add .gitignore file in server folder : to ignore node_modules folder 
+        ------------------------------------------------------------------------
+        Files and Folders :
+                1. server.js file  : our entry file
+                2. user folder => modals and routes folder
+        
+        Add script: in package.json file
+        "start" : "nodemon server.js"
+        > cd server
+        > npm start
+
+
