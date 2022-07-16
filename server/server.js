@@ -1,6 +1,7 @@
 const express = require("express")        // for server configuration
-const mongoose = require("mongoose")      // for connect mongodb to express app
+const mongoose = require("mongoose")      // mongoose is client for connect mongodb to express app
 const userController = require("./user/routes/user")
+const multer = require("multer")()
 
 const app = express()                    // import all configuration inside app
 
@@ -11,8 +12,12 @@ app.listen(3001,(err)=>{                 // server start
     console.log(err)
 })
 
-mongoose.connect("mongodb://localhost/ecommerce",(data)=>{
-     
+app.use(express.json())                         // body parser middleware // json format
+app.use(express.urlencoded({extended: false}))  // body parser middleware // urlencoded format
+app.use(multer.array())                         // body parser middleware // form data
+
+mongoose.connect("mongodb://localhost/ecommerce",(data)=>{    //database connection
+     console.log("successfully connected database")
 },(err)=>{
     console.log(err)
 })
