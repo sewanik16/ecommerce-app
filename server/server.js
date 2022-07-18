@@ -1,6 +1,7 @@
 const express = require("express")        // for server configuration
 const mongoose = require("mongoose")      // mongoose is client for connect mongodb to express app
 const userController = require("./user/routes/user")
+const orderController = require("./user/routes/orders")
 const multer = require("multer")()
 
 const app = express()                    // import all configuration inside app
@@ -22,9 +23,18 @@ mongoose.connect("mongodb://localhost/ecommerce",(data)=>{    //database connect
     console.log(err)
 })
 
-
 app.get("/",(req,res)=>{                  // base route
     res.send("E-Commerce Back-End")
 })
 
-app.use("/user",userController)                     // middleware
+// middleware
+app.use("/user",userController)       
+app.use("/order",orderController)   
+
+
+
+
+// to store in databse --> create()
+// to fetch all data   --> find()
+// to delete           --> deleteOne()
+// to update           --> updateOne()

@@ -16,6 +16,10 @@ const signupSchema = new mongoose.Schema({
         required : true,
         minLength : 6
     }
+},{
+
+    versionKey: false // You should be aware of the outcome after set to false
+
 })
 const signupModal = mongoose.model("usersignup",signupSchema)
 
