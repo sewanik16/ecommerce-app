@@ -7,6 +7,7 @@ const cartController = require("./user/routes/cart")            // midleware 3
 const itemController = require("./user/routes/items")
 
 const multer = require("multer")()        // for encoded data from form
+const cors = require("cors")
 
 const app = express()                    // import all configuration inside app
 
@@ -20,6 +21,7 @@ app.listen(3001,(err)=>{                 // server start
 app.use(express.json())                         // body parser middleware // json format
 app.use(express.urlencoded({extended: false}))  // body parser middleware // urlencoded format
 app.use(multer.array())                         // body parser middleware // form data
+app.use(cors())
 
 mongoose.connect("mongodb://localhost/ecommerce",(data)=>{    //database connection
      console.log("successfully connected database")

@@ -4,7 +4,7 @@ import axios from "axios";
 const Signup = () =>{
     const [signupState, setSignupState] = useState({});
     const signUpFormData = [{attr:"username", type:"text", id:"username",label:"Username:"},
-                            {attr:"phone_number", type:"text", id:"phone_number",label:"Mobile Number:"},
+                            {attr:"phone_number", type:"text", id:"phoneNumber",label:"Mobile Number:"},
                             {attr:"password", type:"password", id:"password",label:"Password:"}]
 
     const handleUserAdd = () =>{
@@ -23,6 +23,9 @@ const Signup = () =>{
         })
     }
     const handleInputChange = (e, id) =>{
+        if(id == "phoneNumber"){
+            e.target.value = parseInt(e.target.value)
+        }
         setSignupState({...signupState, [id]: e.target.value })
     }
     return (
