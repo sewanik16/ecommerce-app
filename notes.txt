@@ -25,3 +25,6 @@ Server :
         > npm start
 
 
+client --> all react related code or front end code
+server --> all node related code or back end code
+
