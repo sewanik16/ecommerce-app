@@ -1,6 +1,6 @@
 
-import Signup from "./Components/signup/signup";
-import Login from "./Components/login/login";
+import Signup from "./components/signup/signup";
+import Login from "./components/login/login";
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 const App = () =>{
@@ -20,16 +20,3 @@ export default App;
 
 
 
-//
-{/* <h2 style={{textAlign:"center"}}>E-Commerce App</h2>
-      <hr/>
-      <div style={{display:"flex", justifyContent:"space-evenly"}}>
-      <div>
-      <h3>Signup Form</h3>
-      <Signup/>
-      </div>
-      <div>
-      <h3>Login Form</h3>
-      <Login/>
-      </div>
-      </div>   */}

@@ -23,7 +23,7 @@ const Signup = () =>{
         })
     }
     const handleInputChange = (e, id) =>{
-        if(id == "phoneNumber"){
+        if(id === "phoneNumber"){
             e.target.value = parseInt(e.target.value)
         }
         setSignupState({...signupState, [id]: e.target.value })
