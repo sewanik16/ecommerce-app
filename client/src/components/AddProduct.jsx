@@ -26,7 +26,7 @@ const AddProduct = () => {
             }
         });
         result = await result.json();
-        navigate("/nav")
+        navigate("/product")
 
     }
 

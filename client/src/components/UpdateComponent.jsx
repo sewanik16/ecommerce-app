@@ -11,6 +11,7 @@ const UpdateProduct = () => {
 
     useEffect(() => {
         getProductDetails();
+        
     }, [])
 
     const getProductDetails = async () => {
@@ -35,7 +36,7 @@ const UpdateProduct = () => {
         });
         result = await result.json();
         if (result) {
-            navigate('/nav')
+            navigate('/product')
         }
 
     }
