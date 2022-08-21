@@ -4,6 +4,7 @@ import { Navbar,Nav, Container, Image } from "react-bootstrap";
 import {LinkContainer } from "react-router-bootstrap";
 
 const NavBar = () => {
+  const auth = localStorage.getItem("user");
   
   return (
     <>
@@ -26,10 +27,15 @@ const NavBar = () => {
              <LinkContainer to="/cart">
              <Nav.Link>Cart</Nav.Link>
              </LinkContainer>
-            
-             <LinkContainer to="/login">
+            {
+              auth? <div>
+             <LinkContainer to="/contact">
+             <Nav.Link>Contact</Nav.Link>
+             </LinkContainer>
+             </div>:<LinkContainer to="/login">
              <Nav.Link>Login</Nav.Link>
              </LinkContainer>
+            }
              
              </Nav>
                 
